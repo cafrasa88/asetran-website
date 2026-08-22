@@ -191,14 +191,104 @@ video[autoplay] {
   font-size: 0.78rem !important;
 }
 
+.badge,
+.badge-success {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.6rem 1.4rem !important;
+  border-radius: 2rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1.2 !important;
+}
+
+.section-subtitle {
+  color: var(--color-text-muted) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.55 !important;
+  margin-bottom: 2.5rem !important;
+  max-width: 680px !important;
+}
+
 /* DESKTOP SPECIFIC RULES (PC SCREEN >= 1024px) */
 @media (min-width: 1024px) {
+  .contact-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 1fr !important;
+    gap: 1.8rem !important;
+    align-items: stretch !important;
+  }
+
+  .contact-form-wrapper {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 2.2rem !important;
+  }
+
+  .contact-side {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    gap: 1.25rem !important;
+  }
+  .nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+  }
+
+  .logo-brand {
+    flex-shrink: 0 !important;
+    min-width: 140px !important;
+    margin-right: 1.5rem !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    gap: clamp(0.6rem, 1.2vw, 1.3rem) !important;
+    align-items: center !important;
+  }
+
+  .nav-link {
+    font-size: 0.85rem !important;
+    padding: 0.25rem 0.2rem !important;
+    white-space: nowrap !important;
+  }
+
+  .nav-btn {
+    padding: 0.45rem 1rem !important;
+    font-size: 0.82rem !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    margin-left: 0.5rem !important;
+  }
   .hero {
-    min-height: 100vh !important;
-    padding-top: 6rem !important;
+    min-height: 80vh !important;
+    padding-top: 7rem !important;
+    padding-bottom: 3rem !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+  }
+
+  .hero p {
+    margin-bottom: 1.8rem !important;
+  }
+
+  .stats-section {
+    padding: 0 0 4rem 0 !important;
+    margin-top: -3.5rem !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  .stats-bar {
+    padding: 1.8rem 2.5rem !important;
   }
 
   .hero-content {
@@ -226,6 +316,7 @@ video[autoplay] {
     gap: 1.8rem !important;
   }
 
+  .estudios-grid-2x2,
   .bento-grid-talleres,
   .quinta-phases-grid,
   .protocol-steps-grid,
@@ -238,6 +329,10 @@ video[autoplay] {
 
 /* MOBILE SPECIFIC RULES (TELEPHONE SCREEN <= 768px) */
 @media (max-width: 768px) {
+  .deliverables-four-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
   .container { 
     padding: 0 1rem !important; 
     max-width: 100% !important; 
@@ -455,6 +550,7 @@ video[autoplay] {
   
   .catalog-grid, 
   .service-portal-grid, 
+  .estudios-grid-2x2, 
   .bento-grid-talleres, 
   .quinta-phases-grid, 
   .protocol-steps-grid, 
@@ -684,11 +780,27 @@ video[autoplay] {
 /* DESKTOP SPECIFIC RULES (PC SCREEN >= 1024px) */
 @media (min-width: 1024px) {
   .hero {
-    min-height: 100vh !important;
-    padding-top: 6rem !important;
+    min-height: 80vh !important;
+    padding-top: 7rem !important;
+    padding-bottom: 3rem !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+  }
+
+  .hero p {
+    margin-bottom: 1.8rem !important;
+  }
+
+  .stats-section {
+    padding: 0 0 4rem 0 !important;
+    margin-top: -3.5rem !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  .stats-bar {
+    padding: 1.8rem 2.5rem !important;
   }
 
   .hero-content {
@@ -716,6 +828,7 @@ video[autoplay] {
     gap: 1.8rem !important;
   }
 
+  .estudios-grid-2x2,
   .bento-grid-talleres,
   .quinta-phases-grid,
   .protocol-steps-grid,
@@ -945,6 +1058,7 @@ video[autoplay] {
   
   .catalog-grid, 
   .service-portal-grid, 
+  .estudios-grid-2x2, 
   .bento-grid-talleres, 
   .quinta-phases-grid, 
   .protocol-steps-grid, 
@@ -1070,8 +1184,9 @@ video[autoplay] {
             <ul class="nav-links" id="nav-links">
                 <li><a href="#inicio" class="nav-link active">Inicio</a></li>
                 <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#servicios" class="nav-link">Inspecciones</a></li>
                 <li><a href="#estudios" class="nav-link">Estudios Viales</a></li>
+                <li><a href="#escoltas" class="nav-link">Custodia</a></li>
                 <li><a href="#tecnologia" class="nav-link">Tecnología</a></li>
                 <li><a href="#noticias" class="nav-link">Noticias</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
@@ -1169,29 +1284,87 @@ video[autoplay] {
                         </div>
                     </div>
 
-                    <!-- Right: Accreditation Block -->
-                    <div class="nosotros-accred reveal">
-                        <div class="accred-panel glass">
-                            <div class="accred-header">
-                                <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; font-weight: 700;">RESPALDO INSTITUCIONAL</span>
-                                <h3>Acreditación Oficial INN Chile</h3>
-                                <p>Acreditados bajo los estrictos protocolos de la norma internacional ISO 17020:2012.</p>
-                            </div>
-                            <div class="accred-logos">
-                                <div class="accred-logo-item">
-                                    <img src="assets/iso-logo-white.png" alt="ISO 17020:2012" style="height: 52px; width: auto; object-fit: contain;">
-                                    <span>ISO 17020 : 2012</span>
+                    <!-- Right: Accreditation & Operational Credentials Block (Perfect Height Balance) -->
+                    <div class="nosotros-accred reveal" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; gap: 1.25rem;">
+                        
+                        <!-- Panel 1: Acreditaciones Oficiales -->
+                        <div class="accred-panel glass" style="padding: 1.8rem; margin: 0; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div class="accred-header" style="margin-bottom: 1.2rem;">
+                                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem;">
+                                    <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; font-weight: 700; margin: 0;">RESPALDO INSTITUCIONAL</span>
+                                    <span style="font-size: 0.75rem; color: #10B981; font-weight: 700; background: rgba(16,185,129,0.12); padding: 0.2rem 0.6rem; border-radius: 0.3rem; border: 1px solid rgba(16,185,129,0.3);">✓ ISO/IEC 17020:2012</span>
                                 </div>
-                                <div class="accred-divider"></div>
-                                <div class="accred-logo-item">
-                                    <img src="assets/inn-logo-white.png" alt="INN-CHILE" style="height: 52px; width: auto; object-fit: contain;">
-                                    <span>Acred. LC 071 y LC 072</span>
+                                <h3 style="font-size: 1.3rem; margin: 0.4rem 0 0.4rem; color: #fff;">Acreditación Oficial Internacional</h3>
+                                <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin: 0;">Organismo de Inspección Técnica Tipo A acreditado con validez para minería, transporte interurbano y obras viales.</p>
+                            </div>
+                            
+                            <div class="accred-logos" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; align-items: center; padding: 1.2rem 0.8rem; background: rgba(10, 14, 23, 0.7); margin-bottom: 0.9rem; border-radius: 0.8rem; border: 1px solid rgba(255, 255, 255, 0.08);">
+                                <div class="accred-logo-item" style="text-align: center;">
+                                    <img src="assets/iso-logo-white.png" alt="ISO 17020:2012" style="height: 38px; width: auto; object-fit: contain; margin-bottom: 0.3rem;">
+                                    <span style="font-size: 0.72rem; font-weight: 700; color: #fff; display: block;">ISO 17020</span>
+                                    <span style="font-size: 0.62rem; color: #94a3b8;">Norma Global</span>
+                                </div>
+                                <div class="accred-logo-item" style="text-align: center;">
+                                    <img src="assets/inn-logo-white.png" alt="INN Chile" style="height: 38px; width: auto; object-fit: contain; margin-bottom: 0.3rem;">
+                                    <span style="font-size: 0.72rem; font-weight: 700; color: #fff; display: block;">INN CHILE</span>
+                                    <span style="font-size: 0.62rem; color: #94a3b8;">LC 071 / LC 072</span>
+                                </div>
+                                <div class="accred-logo-item" style="text-align: center;">
+                                    <img src="assets/inacal-logo-white.png" alt="INACAL Perú" style="height: 38px; width: auto; object-fit: contain; margin-bottom: 0.3rem;">
+                                    <span style="font-size: 0.72rem; font-weight: 700; color: #fff; display: block;">INACAL PERÚ</span>
+                                    <span style="font-size: 0.62rem; color: #94a3b8;">Acreditación DA</span>
                                 </div>
                             </div>
-                            <div class="accred-footer-tag">
-                                <span style="font-size: 0.8rem; color: #10B981; font-weight: 600;">✓ Verificación activa por INN-Chile</span>
+                            
+                            <div class="accred-footer-tag" style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.75rem;">
+                                <span style="font-size: 0.76rem; color: #cbd5e1;">Evaluaciones independientes sin conflicto de interés comercial</span>
+                                <span style="font-size: 0.76rem; color: #10B981; font-weight: 600;">Tipo A</span>
                             </div>
                         </div>
+
+                        <!-- Panel 2: Estándares y Garantía Operacional (Alineación perfecta al fondo) -->
+                        <div class="glass" style="padding: 1.6rem; border-radius: 1.1rem; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); box-shadow: 0 10px 25px rgba(0,0,0,0.3); display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                    <div style="width: 36px; height: 36px; min-width: 36px; border-radius: 0.5rem; background: rgba(242,53,14,0.15); border: 1px solid rgba(242,53,14,0.3); display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 0.98rem; color: #fff; margin: 0; font-weight: 700;">Garantía Operacional y Sello de Calidad</h4>
+                                        <span style="font-size: 0.72rem; color: #94a3b8;">Estándar corporativo para faenas críticas y carreteras</span>
+                                    </div>
+                                </div>
+
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+                                    <div style="background: rgba(10,14,23,0.7); padding: 0.85rem; border-radius: 0.6rem; border: 1px solid rgba(255,255,255,0.05);">
+                                        <div style="font-size: 0.78rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem;">🛡️ Sello con Código QR</div>
+                                        <div style="font-size: 0.72rem; color: #cbd5e1; line-height: 1.35;">Trazabilidad digital instantánea y verificación auditable en faena.</div>
+                                    </div>
+                                    <div style="background: rgba(10,14,23,0.7); padding: 0.85rem; border-radius: 0.6rem; border: 1px solid rgba(255,255,255,0.05);">
+                                        <div style="font-size: 0.78rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem;">⏱️ Vigencia 6 Meses</div>
+                                        <div style="font-size: 0.72rem; color: #cbd5e1; line-height: 1.35;">Certificación semestral conforme a estándares de la gran minería.</div>
+                                    </div>
+                                    <div style="background: rgba(10,14,23,0.7); padding: 0.85rem; border-radius: 0.6rem; border: 1px solid rgba(255,255,255,0.05);">
+                                        <div style="font-size: 0.78rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem;">🇨🇱 🇵🇪 Cobertura Binacional</div>
+                                        <div style="font-size: 0.72rem; color: #cbd5e1; line-height: 1.35;">Despliegue operativo y auditores en rutas de Chile y Perú.</div>
+                                    </div>
+                                    <div style="background: rgba(10,14,23,0.7); padding: 0.85rem; border-radius: 0.6rem; border: 1px solid rgba(255,255,255,0.05);">
+                                        <div style="font-size: 0.78rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem;">🔬 Ensayos END</div>
+                                        <div style="font-size: 0.72rem; color: #cbd5e1; line-height: 1.35;">Ensayos No Destructivos (ultrasonido y tintas) sin desmontaje.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Barra de Compromiso Técnico (Empareja exactamente la línea base con el 3er pill izquierdo) -->
+                            <div style="padding: 0.75rem 1rem; border-radius: 0.6rem; background: rgba(242,53,14,0.08); border: 1px solid rgba(242,53,14,0.22); display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="color: var(--color-primary); font-size: 0.9rem;">⚡</span>
+                                    <span style="font-size: 0.75rem; color: #fff; font-weight: 600;">Tolerancia Cero a Desviaciones Críticas</span>
+                                </div>
+                                <span style="font-size: 0.72rem; color: #94a3b8;">Estándar Minero</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1200,7 +1373,7 @@ video[autoplay] {
         <!-- Section 4: Servicios -->
         <section id="servicios">
             <div class="container">
-                <div class="reveal text-center">
+                <div class="reveal" style="margin-bottom: 3rem; text-align: left;">
                     <span class="badge">NUESTROS SERVICIOS ESPECIALIZADOS</span>
                     <h2>Catálogo de Servicios ASETRAN</h2>
                     <p class="section-subtitle">Seleccione cualquiera de nuestros servicios para abrir su información técnica detallada</p>
@@ -1269,45 +1442,6 @@ video[autoplay] {
                             <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">SISTEMAS DE ACOPLE</span>
                             <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Certificación de Quinta Rueda</h3>
                             <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Inspección sin desmontaje de perno rey, tornamesa y mordazas de tractocamiones.</p>
-                            <span class="equip-tag" style="margin-top: auto; align-self: flex-start; background: rgba(242, 53, 14, 0.18); color: var(--color-primary); border: 1px solid rgba(242, 53, 14, 0.35); font-weight: 600;">Ver Servicio Detallado →</span>
-                        </div>
-                    </a>
-
-                    <!-- Card 6: Estudios Viales -->
-                    <a href="servicio-estudios-viales.html" class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-decoration: none;">
-                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; position: relative; margin: 0; padding: 0; background: #000;">
-                            <img src="assets/cat-estudios-ruta.jpg" alt="Estudios de Ruta e Impacto Vial" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; border: none; outline: none; margin: 0; padding: 0;">
-                        </div>
-                        <div style="padding: 1.3rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
-                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">INGENIERÍA VIAL</span>
-                            <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Estudios de Ruta & Tránsito Industrial</h3>
-                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Diseños viales, informes de impacto de velocidad y elaboración de Libros de Ruta.</p>
-                            <span class="equip-tag" style="margin-top: auto; align-self: flex-start; background: rgba(242, 53, 14, 0.18); color: var(--color-primary); border: 1px solid rgba(242, 53, 14, 0.35); font-weight: 600;">Ver Servicio Detallado →</span>
-                        </div>
-                    </a>
-
-                    <!-- Card 7: Señalización -->
-                    <a href="servicio-senalizacion.html" class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-decoration: none;">
-                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; position: relative; margin: 0; padding: 0; background: #000;">
-                            <img src="assets/cat-senalizacion.jpg" alt="Señalización Vial y Elementos de Tránsito" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; border: none; outline: none; margin: 0; padding: 0;">
-                        </div>
-                        <div style="padding: 1.3rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
-                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">NORMATIVA MOP / MINVU</span>
-                            <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Señalización & Elementos de Tránsito</h3>
-                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Provisión de señalética reflectiva Grado Diamante, demarcación y barreras bionda.</p>
-                            <span class="equip-tag" style="margin-top: auto; align-self: flex-start; background: rgba(242, 53, 14, 0.18); color: var(--color-primary); border: 1px solid rgba(242, 53, 14, 0.35); font-weight: 600;">Ver Servicio Detallado →</span>
-                        </div>
-                    </a>
-
-                    <!-- Card 8: ITO MOP -->
-                    <a href="servicio-ito-mop.html" class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-decoration: none;">
-                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; position: relative; margin: 0; padding: 0; background: #000;">
-                            <img src="assets/cat-ito-mop.jpg" alt="Inspección Técnica de Obra (ITO MOP)" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; border: none; outline: none; margin: 0; padding: 0;">
-                        </div>
-                        <div style="padding: 1.3rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
-                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">FISCALIZACIÓN MOP</span>
-                            <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Inspección Técnica de Obra (ITO MOP)</h3>
-                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Fiscalización de contratos de obra vial, ensayos de pavimentos y desvíos de tránsito.</p>
                             <span class="equip-tag" style="margin-top: auto; align-self: flex-start; background: rgba(242, 53, 14, 0.18); color: var(--color-primary); border: 1px solid rgba(242, 53, 14, 0.35); font-weight: 600;">Ver Servicio Detallado →</span>
                         </div>
                     </a>
@@ -1562,84 +1696,176 @@ video[autoplay] {
         <!-- Section 5: Estudios Viales -->
         <section id="estudios" class="bg-alt">
             <div class="container">
-                <div class="reveal text-center" style="margin-bottom: 3rem;">
-                    <span class="badge">INGENIERÍA VIAL</span>
-                    <h2>Estudios Viales y Tránsito Industrial</h2>
-                    <p class="section-subtitle">Diagnóstico, evaluación y estrategias de seguridad vial corporativa para faenas mineras, parques industriales y redes públicas.</p>
+                <div class="reveal" style="margin-bottom: 3rem; text-align: left;">
+                    <span class="badge">INGENIERÍA & TRÁNSITO INDUSTRIAL</span>
+                    <h2>Estudios Viales & Proyectos</h2>
+                    <p class="section-subtitle">Diagnóstico de seguridad vial, auditorías normativas e inspección técnica de obras para faenas mineras, puertos y redes de transporte.</p>
                 </div>
 
-                <div class="estudios-nuevo-grid reveal">
-                    <div class="estudio-feature-item">
-                        <div class="estudio-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+                <!-- Clean 4-Card Master Grid for Estudios Viales -->
+                <div class="estudios-grid-2x2 reveal" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; margin-bottom: 2rem;">
+                    
+                    <!-- Card 1: Estudios de Ruta -->
+                    <a href="servicio-estudios-viales.html" class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-decoration: none;">
+                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #000;">
+                            <img src="assets/cat-diagnostico-vial.jpg?v=20260820_v2" alt="Estudios de Ruta & Diagnóstico Vial" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
                         </div>
-                        <div class="estudio-text">
-                            <h4>Libro de Ruta</h4>
-                            <p>Cartografía de puntos críticos y velocidades recomendadas por tipo de vehículo.</p>
+                        <div style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
+                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">INGENIERÍA VIAL</span>
+                            <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Estudios de Ruta & Diagnóstico Vial</h3>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Diagnóstico integral de puntos críticos, velocidades seguras, curvas complejas y elaboración de Libro de Ruta con inducción audiovisual.</p>
+                            <span class="equip-tag" style="margin-top: auto; align-self: flex-start; background: rgba(242, 53, 14, 0.18); color: var(--color-primary); border: 1px solid rgba(242, 53, 14, 0.35); font-weight: 600;">Ver Servicio Detallado →</span>
                         </div>
+                    </a>
+
+                    <!-- Card 2: Convivencia de Flotas -->
+                    <a href="servicio-estudios-viales.html" class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-decoration: none;">
+                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #000;">
+                            <img src="assets/cat-convivencia-flotas.jpg?v=20260820_v2" alt="Convivencia & Segregación de Flotas" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                        </div>
+                        <div style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
+                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">GESTIÓN OPERACIONAL</span>
+                            <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Convivencia & Segregación de Flotas</h3>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Modelos de convivencia vial, segregación de rutas y protocolos de interacción segura entre camiones pesados, buses y camionetas escolta.</p>
+                            <span class="equip-tag" style="margin-top: auto; align-self: flex-start; background: rgba(242, 53, 14, 0.18); color: var(--color-primary); border: 1px solid rgba(242, 53, 14, 0.35); font-weight: 600;">Ver Servicio Detallado →</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 3: Señalización MOP -->
+                    <a href="servicio-senalizacion.html" class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-decoration: none;">
+                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #000;">
+                            <img src="assets/cat-senalizacion.jpg?v=20260820_v5" alt="Auditoría & Provisión de Señalética" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                        </div>
+                        <div style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
+                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">NORMATIVA MOP / MINVU</span>
+                            <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Auditoría & Provisión de Señalética</h3>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Medición de reflectancia óptica Grado Diamante, diagnóstico normativo y suministro integral de señalética y demarcación vial.</p>
+                            <span class="equip-tag" style="margin-top: auto; align-self: flex-start; background: rgba(242, 53, 14, 0.18); color: var(--color-primary); border: 1px solid rgba(242, 53, 14, 0.35); font-weight: 600;">Ver Servicio Detallado →</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 4: ITO MOP -->
+                    <a href="servicio-ito-mop.html" class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-decoration: none;">
+                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #000;">
+                            <img src="assets/cat-ito-mop.jpg?v=20260821_v1" alt="Inspección Técnica de Obra (ITO MOP)" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                        </div>
+                        <div style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
+                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">FISCALIZACIÓN MOP</span>
+                            <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Inspección Técnica de Obra (ITO MOP)</h3>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Fiscalización técnica de contratos de conservación vial, control de pavimentos, fajas viales y planes de desvío en terreno.</p>
+                            <span class="equip-tag" style="margin-top: auto; align-self: flex-start; background: rgba(242, 53, 14, 0.18); color: var(--color-primary); border: 1px solid rgba(242, 53, 14, 0.35); font-weight: 600;">Ver Servicio Detallado →</span>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Deliverables Showcase Block (100% Balanced & Symmetrical) -->
+                <div class="glass reveal" style="margin-top: 2.5rem; padding: 1.8rem 2rem; border-radius: 1.1rem; border: 1px solid rgba(242, 53, 14, 0.3); background: rgba(10, 14, 23, 0.9); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <span style="background: var(--color-primary); color: #fff; padding: 0.25rem 0.65rem; border-radius: 0.35rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px;">DOCUMENTACIÓN & ENTREGABLES</span>
+                            <h4 style="font-size: 1rem; color: #fff; margin: 0; font-weight: 700;">Entregables Oficiales Incluidos en Cada Estudio</h4>
+                        </div>
+                        <span style="font-size: 0.75rem; color: #10B981; font-weight: 600;">✓ Formato Físico y Digital con Trazabilidad</span>
                     </div>
-                    <div class="estudio-feature-item">
-                        <div class="estudio-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;" class="deliverables-four-grid">
+                        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 0.75rem; padding: 1rem 0.9rem; display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="font-size: 1.6rem; min-width: 32px; text-align: center;">📄</div>
+                            <div>
+                                <div style="font-size: 0.85rem; font-weight: 700; color: #fff; line-height: 1.25;">Informe Técnico</div>
+                                <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.15rem;">Diagnóstico y mitigación</div>
+                            </div>
                         </div>
-                        <div class="estudio-text">
-                            <h4>Gestión de Velocidades</h4>
-                            <p>Estudio técnico de límites y auditoría de tramos de alta complejidad operacional.</p>
+
+                        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 0.75rem; padding: 1rem 0.9rem; display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="font-size: 1.6rem; min-width: 32px; text-align: center;">🗺️</div>
+                            <div>
+                                <div style="font-size: 0.85rem; font-weight: 700; color: #fff; line-height: 1.25;">Libro de Ruta</div>
+                                <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.15rem;">Por tipo de vehículo</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="estudio-feature-item">
-                        <div class="estudio-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+
+                        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 0.75rem; padding: 1rem 0.9rem; display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="font-size: 1.6rem; min-width: 32px; text-align: center;">🎬</div>
+                            <div>
+                                <div style="font-size: 0.85rem; font-weight: 700; color: #fff; line-height: 1.25;">Videos de Inducción</div>
+                                <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.15rem;">Material HD interactivo</div>
+                            </div>
                         </div>
-                        <div class="estudio-text">
-                            <h4>Análisis de Puntos Críticos</h4>
-                            <p>Identificación de curvas peligrosas, pendientes severas y cruces industriales.</p>
-                        </div>
-                    </div>
-                    <div class="estudio-feature-item">
-                        <div class="estudio-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                        </div>
-                        <div class="estudio-text">
-                            <h4>Videos de Inducción</h4>
-                            <p>Material audiovisual interactivo de inducción vial para conductores en faena.</p>
-                        </div>
-                    </div>
-                    <div class="estudio-feature-item">
-                        <div class="estudio-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                        </div>
-                        <div class="estudio-text">
-                            <h4>Evaluación de Señalización</h4>
-                            <p>Diagnóstico del estado y cumplimiento normativo de la señalética existente.</p>
-                        </div>
-                    </div>
-                    <div class="estudio-feature-item">
-                        <div class="estudio-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        </div>
-                        <div class="estudio-text">
-                            <h4>Convivencia de Flotas</h4>
-                            <p>Análisis de compatibilidad operativa entre vehículos pesados y livianos en ruta.</p>
+
+                        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 0.75rem; padding: 1rem 0.9rem; display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="font-size: 1.6rem; min-width: 32px; text-align: center;">📊</div>
+                            <div>
+                                <div style="font-size: 0.85rem; font-weight: 700; color: #fff; line-height: 1.25;">Catastro Señalética</div>
+                                <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.15rem;">Cubicación y costos MOP</div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Deliverables Row -->
-                <div class="entregables-row reveal">
-                    <span class="entregables-label">Entregables:</span>
-                    <div class="entregable-chip">📄 Informe de Estudio Vial</div>
-                    <div class="entregable-chip">🗺️ Libro de Ruta</div>
-                    <div class="entregable-chip">🎬 Videos de Inducción HD</div>
-                    <div class="entregable-chip">📊 Valorización de Señalética</div>
+        <!-- Section 5.5: Custodia y Escoltas Viales (SECTRA Seguridad) -->
+        <section id="escoltas" style="padding: 4.5rem 0 2.5rem 0;">
+            <div class="container">
+                <div class="reveal" style="margin-bottom: 2.5rem; text-align: left;">
+                    <div style="display: inline-flex; align-items: center; justify-content: flex-start; gap: 0.8rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <span class="badge" style="margin-bottom: 0;">OPERACIONES ESPECIALES</span>
+                        <span class="badge-success" style="margin-bottom: 0;">✓ RESOLUCIÓN EXENTA N.° 2444</span>
+                    </div>
+                    <h2>Custodia y Transporte de Carga Sobredimensionada</h2>
+                    <p class="section-subtitle">Seguridad, coordinación y control operacional en cada kilómetro para transportes especiales y faenas mineras.</p>
+                </div>
+
+                <!-- Main Escoltas Grid (2 Large Master Cards) -->
+                <div class="estudios-grid-2x2 reveal" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; margin-bottom: 2rem;">
+                    
+                    <!-- Card 1: Custodia y Transporte de Carga Sobredimensionada -->
+                    <a href="servicio-escoltas.html" class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-decoration: none;">
+                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #000;">
+                            <img src="assets/cat-escoltas-carga.jpg?v=20260821_v5" alt="Custodia de Carga Sobredimensionada" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                        </div>
+                        <div style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
+                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">TRANSPORTE ESPECIAL</span>
+                            <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Gestión Integral de Operaciones de Transporte Especial</h3>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Planificación de ruta, evaluación técnica de puentes y acompañamiento en terreno para cargas sobredimensionadas y sobrepeso en minería e industria.</p>
+                            <ul class="tech-nuevo-specs" style="margin-top: auto; padding-top: 0.5rem; margin-bottom: 1rem;">
+                                <li>🛣️ Planificación y estudio de ruta</li>
+                                <li>📻 Comunicación permanente VHF/UHF</li>
+                                <li>🛑 Control y despeje de interferencias</li>
+                                <li>📋 Informes operacionales de traslado</li>
+                            </ul>
+                            <span class="equip-tag" style="align-self: flex-start; background: rgba(242, 53, 14, 0.18); color: var(--color-primary); border: 1px solid rgba(242, 53, 14, 0.35); font-weight: 600;">Ver Servicio Detallado →</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 2: Vehículos de Acompañamiento Especializados -->
+                    <a href="servicio-escoltas.html" class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-decoration: none;">
+                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #000;">
+                            <img src="assets/cat-escoltas-pickup.jpg?v=20260821_v3" alt="Vehículos de Acompañamiento Especializados" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                        </div>
+                        <div style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
+                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">FLOTA DE ACOMPAÑAMIENTO</span>
+                            <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Vehículos de Escolta y Seguridad</h3>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Camionetas 4x4 equipadas bajo estricta normativa de seguridad vial con advertencia visual anticipada, balizas y señalización LED.</p>
+                            <ul class="tech-nuevo-specs" style="margin-top: auto; padding-top: 0.5rem; margin-bottom: 1rem;">
+                                <li>🚨 Balizas estroboscópicas &amp; flecha LED</li>
+                                <li>📡 Equipamiento de alta visibilidad</li>
+                                <li>🦺 Conductores y escoltas acreditados</li>
+                                <li>⏱️ Soporte y monitoreo 24/7 en ruta</li>
+                            </ul>
+                            <span class="equip-tag" style="align-self: flex-start; background: rgba(242, 53, 14, 0.18); color: var(--color-primary); border: 1px solid rgba(242, 53, 14, 0.35); font-weight: 600;">Ver Servicio Detallado →</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Section 6: Tecnología -->
-        <section id="tecnologia">
+        <section id="tecnologia" class="bg-alt" style="padding: 3.5rem 0 2.5rem 0;">
             <div class="container">
-                <div class="reveal text-center" style="margin-bottom: 3.5rem;">
+                <div class="reveal" style="margin-bottom: 2.2rem; text-align: left;">
                     <span class="badge">INNOVACIÓN TECNOLÓGICA</span>
                     <h2>Tecnología e Innovación</h2>
                     <p class="section-subtitle">Soluciones de vanguardia para la gestión del tránsito, flotas y seguridad vial corporativa</p>
@@ -1647,60 +1873,66 @@ video[autoplay] {
 
                 <div class="tech-nuevo-grid reveal">
                     <!-- Radar Card -->
-                    <div class="tech-nuevo-card glass">
-                        <div class="tech-nuevo-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
+                    <div class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #000;">
+                            <img src="assets/cat-radares-velocidad.jpg?v=20260820_v4" alt="Radares de Velocidad Disuasivos" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
                         </div>
-                        <div class="tech-nuevo-badge">HARDWARE</div>
-                        <h3>Radares de Velocidad Disuasivos</h3>
-                        <p>Carros solares móviles para minería y caminos privados. Disuaden excesos de velocidad y registran datos en tiempo real.</p>
-                        <ul class="tech-nuevo-specs">
-                            <li>⚡ Instalación &lt;5 min</li>
-                            <li>📡 Alcance 300m</li>
-                            <li>📷 Cámara Full HD</li>
-                            <li>☀️ Panel LED &amp; Solar</li>
-                        </ul>
+                        <div style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
+                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">HARDWARE · EQUIPO MÓVIL</span>
+                            <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Radares de Velocidad Disuasivos</h3>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Carros solares móviles para minería y faenas privadas. Disuaden excesos de velocidad mediante panel LED interactivo y registro de infractores en tiempo real.</p>
+                            <ul class="tech-nuevo-specs" style="margin-top: auto; padding-top: 0.5rem;">
+                                <li>⚡ Despliegue en &lt; 5 min</li>
+                                <li>📡 Radar alcance 300m</li>
+                                <li>📷 Cámara Full HD Guardian</li>
+                                <li>☀️ Autonomía 100% solar</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!-- App Card -->
-                    <div class="tech-nuevo-card glass">
-                        <div class="tech-nuevo-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    <div class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #000;">
+                            <img src="assets/cat-app-conduccion.jpg?v=20260820_v1" alt="App de Apoyo a la Conducción" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
                         </div>
-                        <div class="tech-nuevo-badge">SOFTWARE</div>
-                        <h3>App Apoyo a Conducción</h3>
-                        <p>Aplicación móvil tipo Waze para navegación interna en rutas privadas y recintos industriales con alertas de zona crítica.</p>
-                        <ul class="tech-nuevo-specs">
-                            <li>🗺️ Orientación en rutas</li>
-                            <li>🔔 Alertas preventivas</li>
-                            <li>⚠️ Zonas críticas</li>
-                            <li>📴 Modo offline</li>
-                        </ul>
+                        <div style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
+                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">SOFTWARE · NAVEGACIÓN VIAL</span>
+                            <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">App de Apoyo a la Conducción</h3>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Navegación GPS especializada tipo Waze para rutas privadas y faenas industriales. Alertas de velocidad, curvas críticas y asistencia en tiempo real.</p>
+                            <ul class="tech-nuevo-specs" style="margin-top: auto; padding-top: 0.5rem;">
+                                <li>🗺️ Orientación en rutas</li>
+                                <li>🔔 Alertas preventivas</li>
+                                <li>⚠️ Zonas críticas</li>
+                                <li>📴 Modo 100% offline</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!-- ASETRAN Check Card -->
-                    <div class="tech-nuevo-card glass tech-highlight-card">
-                        <div class="tech-nuevo-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    <div class="phase-card glass" style="padding: 0; overflow: hidden; border-radius: 1.1rem; display: flex; flex-direction: column; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(255,255,255,0.03); box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+                        <div style="width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #000;">
+                            <img src="assets/cat-asetran-check.jpg?v=20260820_v1" alt="ASETRAN Check Plataforma Digital" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
                         </div>
-                        <div class="tech-nuevo-badge tech-badge-highlight">PLATAFORMA</div>
-                        <h3>ASETRAN Check</h3>
-                        <p>Plataforma digital para la gestión integral de inspecciones con trazabilidad auditable y monitoreo en tiempo real.</p>
-                        <ul class="tech-nuevo-specs">
-                            <li>📋 Checklists digitales</li>
-                            <li>📊 Dashboard KPIs</li>
-                            <li>🔏 Sello digital</li>
-                            <li>📱 Android / iOS / Web</li>
-                        </ul>
+                        <div style="padding: 1.4rem; display: flex; flex-direction: column; flex-grow: 1; background: rgba(10, 14, 23, 0.95); text-align: left;">
+                            <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; align-self: flex-start; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.72rem;">PLATAFORMA · CLOUD & APP</span>
+                            <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">ASETRAN Check</h3>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 1rem;">Plataforma digital para la gestión integral de inspecciones técnicas, emisión de sellos digitales y monitoreo de flotas en tiempo real.</p>
+                            <ul class="tech-nuevo-specs" style="margin-top: auto; padding-top: 0.5rem;">
+                                <li>📋 Checklists digitales</li>
+                                <li>📊 Dashboard de KPIs</li>
+                                <li>🔏 Sello digital seguro</li>
+                                <li>📱 Android / iOS / Web</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 6.5: Noticias & Novedades Técnicas -->
-        <section id="noticias" class="bg-alt">
+        <section id="noticias" style="padding: 3rem 0 3.5rem 0;">
             <div class="container">
-                <div class="reveal text-center" style="margin-bottom: 3.5rem;">
+                <div class="reveal" style="margin-bottom: 2.2rem; text-align: left;">
                     <span class="badge">ACTUALIDAD Y NORMATIVA</span>
                     <h2>Noticias y Novedades Técnicas</h2>
                     <p class="section-subtitle">Últimas publicaciones sobre regulación vial, acreditaciones ISO 17020 y tecnología de transporte</p>
@@ -1721,7 +1953,7 @@ video[autoplay] {
 
                     <article class="news-card glass">
                         <div class="news-img-header" style="height: 160px; overflow: hidden; border-radius: 0.6rem 0.6rem 0 0; margin: -0.1px; background: linear-gradient(135deg, rgba(242,53,14,0.25), rgba(10,14,23,0.95));">
-                            <img src="assets/cat-estudios-ruta.jpg" alt="Radares Solares" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6; mix-blend-mode: luminosity;">
+                            <img src="assets/cat-radares-velocidad.jpg?v=20260820_v4" alt="Radares Solares" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6; mix-blend-mode: luminosity;">
                         </div>
                         <div style="padding: 1.5rem;">
                             <div class="news-date">JUNIO 2026</div>
@@ -1747,9 +1979,9 @@ video[autoplay] {
         </section>
 
         <!-- Section 7: Contacto -->
-        <section id="contacto">
+        <section id="contacto" class="bg-alt" style="padding: 4rem 0 5rem 0;">
             <div class="container">
-                <div class="reveal text-center" style="margin-bottom: 3.5rem;">
+                <div class="reveal" style="margin-bottom: 2.5rem; text-align: left;">
                     <span class="badge">CONTÁCTENOS</span>
                     <h2>Hablemos de tu Proyecto</h2>
                     <p class="section-subtitle">Nuestro equipo técnico está disponible para responder sus consultas y coordinar una inspección.</p>
@@ -1785,6 +2017,7 @@ video[autoplay] {
                                         <option>Certificación de Quinta Rueda</option>
                                         <option>Peritajes e Investigación</option>
                                         <option>Estudios Viales y Tránsito Industrial</option>
+                                        <option>Custodia y Escolta de Carga Sobredimensionada</option>
                                         <option>Radares de Velocidad Disuasivos</option>
                                         <option>ASETRAN Check</option>
                                         <option>Capacitaciones</option>
@@ -1800,47 +2033,84 @@ video[autoplay] {
                         </form>
                     </div>
 
-                    <!-- Contact Info -->
-                    <div class="contact-side">
-                        <div class="contact-info-card glass">
-                            <div class="contact-info-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <!-- Contact Info (2 Balanced Glass Panels with Exact Baseline Matching) -->
+                    <div class="contact-side" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; gap: 1.25rem;">
+                        
+                        <!-- Panel 1: Canales de Atención Directa -->
+                        <div class="glass" style="padding: 1.8rem 2rem; border-radius: 1.1rem; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 0.75rem;">
+                                <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; font-weight: 700; margin: 0; font-size: 0.7rem;">ATENCIÓN DIRECTA</span>
+                                <span style="font-size: 0.75rem; color: #10B981; font-weight: 600;">⏱️ Respuesta &lt; 24h</span>
                             </div>
-                            <div>
-                                <h4>Teléfonos</h4>
-                                <p>+56 02 26680244</p>
-                                <p>+56 02 26621194</p>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <!-- Teléfonos -->
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 42px; height: 42px; min-width: 42px; border-radius: 0.6rem; background: rgba(242,53,14,0.12); border: 1px solid rgba(242,53,14,0.25); display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    </div>
+                                    <div>
+                                        <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">Teléfonos Central</div>
+                                        <div style="font-size: 0.92rem; font-weight: 700; color: #fff;">+56 02 26680244 &nbsp;|&nbsp; +56 02 26621194</div>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 42px; height: 42px; min-width: 42px; border-radius: 0.6rem; background: rgba(242,53,14,0.12); border: 1px solid rgba(242,53,14,0.25); display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                    </div>
+                                    <div>
+                                        <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">Correo Oficial</div>
+                                        <div style="font-size: 0.92rem; font-weight: 700; color: #fff;">contacto@asetran.cl</div>
+                                    </div>
+                                </div>
+
+                                <!-- Web & Cobertura -->
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 42px; height: 42px; min-width: 42px; border-radius: 0.6rem; background: rgba(242,53,14,0.12); border: 1px solid rgba(242,53,14,0.25); display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                    </div>
+                                    <div>
+                                        <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">Sitio Web &amp; Operaciones</div>
+                                        <div style="font-size: 0.92rem; font-weight: 700; color: #fff;">www.asetran.cl &nbsp;·&nbsp; Chile &amp; Perú</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="contact-info-card glass">
-                            <div class="contact-info-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            </div>
+                        <!-- Panel 2: Acreditación Oficial Binacional (ISO 17020) -->
+                        <div class="glass" style="padding: 1.8rem 2rem; border-radius: 1.1rem; border: 1px solid rgba(242, 53, 14, 0.35); background: rgba(10, 14, 23, 0.95); box-shadow: 0 10px 25px rgba(0,0,0,0.4); display: flex; flex-direction: column; justify-content: space-between; flex: 1.15;">
                             <div>
-                                <h4>Email</h4>
-                                <p>contacto@asetran.cl</p>
+                                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.6rem;">
+                                    <span class="portal-tag" style="background: var(--color-primary); color: #fff; border: none; font-weight: 700; font-size: 0.7rem; margin: 0;">RESPALDO &amp; ACREDITACIÓN</span>
+                                    <span style="font-size: 0.75rem; color: #10B981; font-weight: 700; background: rgba(16,185,129,0.12); padding: 0.15rem 0.5rem; border-radius: 0.3rem; border: 1px solid rgba(16,185,129,0.3);">✓ ISO 17020:2012</span>
+                                </div>
+                                <p style="font-size: 0.82rem; color: #cbd5e1; margin-bottom: 1rem; line-height: 1.45;">Organismo de Inspección Técnica acreditado internacionalmente para minería, flotas y transporte:</p>
+                                
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1rem;">
+                                    <!-- Chile: INN -->
+                                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 0.6rem; padding: 0.75rem 0.6rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem;">
+                                        <img src="assets/inn-logo-white.png" alt="INN Chile" style="height: 28px; width: auto; object-fit: contain;">
+                                        <div style="font-size: 0.75rem; font-weight: 700; color: #fff;">INN CHILE</div>
+                                        <div style="font-size: 0.65rem; color: #94a3b8; line-height: 1.2;">Acred. LC 071 / LC 072</div>
+                                    </div>
+                                    <!-- Perú: INACAL -->
+                                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 0.6rem; padding: 0.75rem 0.6rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem;">
+                                        <img src="assets/inacal-logo-white.png" alt="INACAL Perú" style="height: 28px; width: auto; object-fit: contain;">
+                                        <div style="font-size: 0.75rem; font-weight: 700; color: #fff;">INACAL PERÚ</div>
+                                        <div style="font-size: 0.65rem; color: #94a3b8; line-height: 1.2;">Organismo Acreditado DA</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Barra de Compromiso y Respuesta Inmediata (Alinea al píxel con el botón naranja) -->
+                            <div style="padding: 0.65rem 0.9rem; border-radius: 0.5rem; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); display: flex; align-items: center; justify-content: space-between;">
+                                <span style="font-size: 0.75rem; color: #cbd5e1;">⚡ Cobertura técnica en todo Chile y Perú</span>
+                                <span style="font-size: 0.72rem; color: #10B981; font-weight: 700;">Atención Inmediata</span>
                             </div>
                         </div>
 
-                        <div class="contact-info-card glass">
-                            <div class="contact-info-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                            </div>
-                            <div>
-                                <h4>Web</h4>
-                                <p>www.asetran.cl</p>
-                            </div>
-                        </div>
-
-                        <!-- Quick Info Box -->
-                        <div class="contact-quick-box">
-                            <div class="quick-box-icon">⏱️</div>
-                            <div>
-                                <h5>Respuesta rápida garantizada</h5>
-                                <p>Respondemos dentro de 24 horas hábiles. Para inspecciones urgentes, contáctenos directamente por teléfono.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

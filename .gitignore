@@ -1,0 +1,11 @@
+# Python temporary scripts
+*.py
+__pycache__/
+
+# Temporary scratch & test crops
+crop_*.jpg
+preview_*.jpg
+test_*.jpg
+scratch_*.jpg
+orig_*.jpg
+pdf_extracted_*

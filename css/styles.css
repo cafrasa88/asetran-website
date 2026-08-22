@@ -166,6 +166,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .logo-brand {
@@ -186,7 +187,7 @@ section {
 
 .nav-links {
   display: flex;
-  gap: 2.2rem;
+  gap: 1.2rem;
   align-items: center;
 }
 
@@ -649,7 +650,7 @@ section {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -693,19 +694,39 @@ section {
 }
 
 .badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: 0.6rem 1.4rem;
   border-radius: 2rem;
   font-size: 0.85rem;
   font-weight: 600;
   background: rgba(10, 14, 23, 0.82);
   border: 1px solid var(--color-primary);
-  margin-bottom: 2rem;
   color: var(--color-primary);
   letter-spacing: 0.5px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.badge-success {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #10B981;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 .hero h1 {
@@ -758,8 +779,8 @@ section {
 
 /* Stats Bar */
 .stats-section {
-  padding: 0 0 6rem 0;
-  margin-top: -3rem;
+  padding: 0 0 4rem 0;
+  margin-top: -3.5rem;
   position: relative;
   z-index: 10;
 }
