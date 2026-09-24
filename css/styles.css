@@ -2977,3 +2977,171 @@ html, body {
     font-size: 1.05rem !important;
   }
 }
+
+/* ==========================================================================
+   Master Service Inquiry Form Capsule (#solicitar / .solicitar-box)
+   ========================================================================== */
+.solicitar-box,
+#solicitar {
+  position: relative;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(10, 14, 23, 0.96) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 1.25rem !important;
+  padding: 3rem 3.5rem !important;
+  margin-top: 3.5rem !important;
+  margin-bottom: 3.5rem !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  clear: both !important;
+}
+
+.solicitar-box h3,
+#solicitar h3 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem) !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin: 0 0 0.75rem 0 !important;
+  letter-spacing: -0.5px !important;
+}
+
+.solicitar-box p,
+#solicitar p {
+  font-size: 1.05rem !important;
+  color: var(--color-text-muted) !important;
+  line-height: 1.6 !important;
+  margin: 0 0 2.2rem 0 !important;
+  max-width: 800px !important;
+}
+
+.service-inquiry-form {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1.25rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.service-inquiry-form input,
+.service-inquiry-form select {
+  width: 100% !important;
+  padding: 1.1rem 1.25rem !important;
+  border-radius: 0.75rem !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.95rem !important;
+  box-sizing: border-box !important;
+  transition: all 0.25s ease !important;
+  outline: none !important;
+}
+
+.service-inquiry-form input:focus,
+.service-inquiry-form select:focus,
+.service-inquiry-form textarea:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 0 0 3px rgba(242, 53, 14, 0.22) !important;
+}
+
+.service-inquiry-form input::placeholder,
+.service-inquiry-form textarea::placeholder,
+.form-textarea::placeholder {
+  color: rgba(148, 163, 184, 0.75) !important;
+  font-family: var(--font-body) !important;
+}
+
+.service-inquiry-form textarea,
+.form-textarea {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  padding: 1.1rem 1.25rem !important;
+  border-radius: 0.75rem !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.95rem !important;
+  box-sizing: border-box !important;
+  resize: vertical !important;
+  min-height: 120px !important;
+  line-height: 1.6 !important;
+  outline: none !important;
+  transition: all 0.25s ease !important;
+}
+
+.form-actions-wrapper {
+  grid-column: 1 / -1 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 1.25rem !important;
+  margin-top: 0.5rem !important;
+  width: 100% !important;
+}
+
+.form-actions-wrapper .btn {
+  padding: 1rem 2.2rem !important;
+  border-radius: 0.75rem !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.25s ease !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+}
+
+.form-actions-wrapper .btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #ff5722 100%) !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(242, 53, 14, 0.35) !important;
+}
+
+.form-actions-wrapper .btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(242, 53, 14, 0.5) !important;
+}
+
+.form-actions-wrapper .btn-outline {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #cbd5e1 !important;
+}
+
+.form-actions-wrapper .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+@media (max-width: 768px) {
+  .solicitar-box,
+  #solicitar {
+    padding: 1.75rem 1.25rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    border-radius: 1rem !important;
+  }
+
+  .service-inquiry-form {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .form-actions-wrapper {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+
+  .form-actions-wrapper .btn {
+    width: 100% !important;
+  }
+}
+
