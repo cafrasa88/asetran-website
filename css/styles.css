@@ -709,6 +709,7 @@ section {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .badge-success {
@@ -727,6 +728,7 @@ section {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .hero h1 {
